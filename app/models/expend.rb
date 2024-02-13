@@ -1,0 +1,2 @@
+class Expend < ApplicationRecord
+end
