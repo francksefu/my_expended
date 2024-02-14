@@ -1,0 +1,14 @@
+<div class='w-50 d-block mx-auto'>
+  <% if @groups.empty? %>
+  <h5> Not group for this user </h5>
+  <% else %>
+
+    <% @groups.each do |group| %>
+      <a href='<%= group_path(group) %>' class='text-secondary d-flex justify-content-between border border-1 p-3 m-3'>
+        <%= image_tag("#{group.icon}.png", :alt => "picture") %>
+        <h3><%= group.name %> </h3>
+        <h6></h6>
+      </a>
+    <% end %>
+  <% end %>
+</div>
