@@ -1,0 +1,24 @@
+<h1 class="text-secondary text-center"> Create expend </h1>
+<% if @groups.empty? %>
+  <h6> First go create group </h6>
+<% else %>
+<div class= 'border border-1 mt-3 w-75 p-3 d-block mx-auto'>
+<%= form_with model: @expend, url: expends_path, method: :post, class: 'w-100', local: true do |form| %>
+<div class='input-group mb-3'>
+  <%= form.label :name, class: 'input-group-text' %>
+  <%= form.text_field :name, class: 'form-control'%>
+</div>
+
+<div class='input-group mb-3'>
+  <%= form.label :amount, class: 'input-group-text' %>
+  <%= form.number_field :amount, class: 'form-control'%>
+</div>
+
+<div class="input-group mb-3">
+    <%= form.label :group_id , class: "input-group-text"%>
+    <%= form.select :group_id, @groups.map { |group| ["#{group.name} icon : #{group.icon} ", group.id] },{}, { class:"form-select" } %>
+  </div>
+
+<%= form.submit class: 'btn btn-primary bleu' %>
+<% end %>
+<% end %>

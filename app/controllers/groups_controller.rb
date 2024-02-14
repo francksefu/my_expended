@@ -1,13 +1,9 @@
 class GroupsController < ApplicationController
-
+  before_action :require_loggin
   def index
     @groups = current_user.groups
   end
 
-  def show
-    @group = Group.find(params[:id].to_i)
-    @expends = Expend.where(group: @group)
-  end
 
   def new
     @group = Group.new
@@ -26,5 +22,11 @@ class GroupsController < ApplicationController
 
   def group_params
     params.require(:group).permit(:name, :icon)
+  end
+
+  def require_loggin
+    unless current_user
+      redirect_to homes_path
+    end
   end
 end

@@ -1,14 +1,16 @@
-<div class='w-50 d-block mx-auto'>
+<div class='w-75 d-block mx-auto'>
   <% if @groups.empty? %>
   <h5> Not group for this user </h5>
   <% else %>
 
     <% @groups.each do |group| %>
-      <a href='<%= group_path(group) %>' class='text-secondary d-flex justify-content-between border border-1 p-3 m-3'>
+      <a href='<%= group_expends_path(group) %>' class='text-secondary d-flex justify-content-between border border-1 p-3 m-3'>
         <%= image_tag("#{group.icon}.png", :alt => "picture") %>
         <h3><%= group.name %> </h3>
-        <h6></h6>
+        <h6><%= group.expends.where(author_id: current_user.id).sum(:amount) %> $ </h6>
       </a>
     <% end %>
   <% end %>
+
+   <a href='<%= new_group_path %>' class='btn btn-primary green mt-3 mb-3 w-25 d-block mx-auto'> Create group </a>
 </div>
