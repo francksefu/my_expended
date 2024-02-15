@@ -17,5 +17,4 @@ RSpec.describe Expend, type: :model do
     subject.amount = -5
     expect(subject).to_not be_valid
   end
-
 end

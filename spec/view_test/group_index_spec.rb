@@ -27,7 +27,6 @@ RSpec.describe 'Groups/views', type: :feature do
     visit groups_path
     expect(page).to have_content(group.expends.where(author_id: user.id).sum(:amount))
     expect(page).to have_content(group2.expends.where(author_id: user.id).sum(:amount))
-
   end
 
   scenario 'name of group' do
@@ -48,5 +47,4 @@ RSpec.describe 'Groups/views', type: :feature do
     click_link group2.name
     expect(page).to have_current_path(group_expends_path(group2))
   end
-
 end

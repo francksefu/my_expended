@@ -12,11 +12,11 @@ RSpec.describe 'Groups/views', type: :feature do
   end
 
   let!(:expend) do
-    Expend.create(name: 'eat checken', amount: 20, author_id: user.id, group: group)
+    Expend.create(name: 'eat checken', amount: 20, author_id: user.id, group:)
   end
 
   let!(:expend1) do
-    Expend.create(name: 'eat beuf', amount: 10, author_id: user.id, group: group)
+    Expend.create(name: 'eat beuf', amount: 10, author_id: user.id, group:)
   end
 
   before do
@@ -39,5 +39,4 @@ RSpec.describe 'Groups/views', type: :feature do
     visit group_expends_path(group)
     expect(page).to have_content(group.name)
   end
-
 end

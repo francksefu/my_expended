@@ -15,7 +15,7 @@ describe ' Controller /groups' do
   end
 
   it 'get index for group' do
-    get "/groups"
+    get '/groups'
     expect(response.status).to eq(200)
     expect(response.body).not_to eq nil
     expect(response).to render_template 'groups/index'

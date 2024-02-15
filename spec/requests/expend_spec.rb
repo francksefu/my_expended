@@ -11,7 +11,7 @@ describe ' Controller /expends' do
   end
 
   let!(:expend) do
-    Expend.create(name: 'eating chicken', amount: 10, author_id: user.id, group: group)
+    Expend.create(name: 'eating chicken', amount: 10, author_id: user.id, group:)
   end
 
   before do
@@ -24,5 +24,4 @@ describe ' Controller /expends' do
     expect(response.body).not_to eq nil
     expect(response).to render_template 'expends/index'
   end
-
 end
