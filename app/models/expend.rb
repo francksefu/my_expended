@@ -3,6 +3,6 @@ class Expend < ApplicationRecord
   belongs_to :group
 
   validates :name, presence: true
-  validates :amount, numericality: {great_than_or_equal_to: 0}
+  validates :amount, numericality: { great_than_or_equal_to: 0 }
   validates :author_id, presence: true
 end

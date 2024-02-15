@@ -4,7 +4,6 @@ class GroupsController < ApplicationController
     @groups = current_user.groups
   end
 
-
   def new
     @group = Group.new
   end
@@ -16,7 +15,7 @@ class GroupsController < ApplicationController
       redirect_to groups_path
     else
       flash.now[:error] = 'Error : Group didn t save'
-      render :new, locals: {group: @group}
+      render :new, locals: { group: @group }
     end
   end
 
@@ -25,8 +24,8 @@ class GroupsController < ApplicationController
   end
 
   def require_loggin
-    unless current_user
-      redirect_to homes_path
-    end
+    return if current_user
+
+    redirect_to homes_path
   end
 end
