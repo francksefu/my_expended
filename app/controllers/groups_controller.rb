@@ -1,4 +1,5 @@
 class GroupsController < ApplicationController
+  layout 'group'
   before_action :require_loggin
   def index
     @groups = current_user.groups
