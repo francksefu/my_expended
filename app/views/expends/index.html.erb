@@ -1,0 +1,20 @@
+<div class='w-75 d-block mx-auto'>
+  <div class='text-secondary d-flex justify-content-between border border-1 p-3 m-3'>
+    <%= image_tag("#{@group.icon}.png", :alt => "picture") %>
+    <h3><%= @group.name %> </h3>
+    
+    <h6><%= @group.expends.where(author_id: current_user.id).sum(:amount) %> $ </h6>
+  </div>
+  <% if @expends.empty? %>
+  <h5> Not expends for this user in this group </h5>
+  <% else %>
+
+    <% @expends.each do |expend| %>
+      <div class='text-secondary d-flex justify-content-between border border-1 p-3 m-3'>
+        <h3><%= expend.name %> </h3>
+        <h6><%= expend.amount %></h6>
+      </div>
+    <% end %>
+  <% end %>
+  <a href='<%= new_expend_path %>' class='btn btn-primary green mt-3 mb-3 w-25 d-block mx-auto'> Create expend </a>
+</div>
