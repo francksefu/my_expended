@@ -11,6 +11,8 @@
   - [🛠 Built With](#built-with)
     - [Tech Stack](#tech-stack)
     - [Key Features](#key-features)
+
+ - [🚀 Live Demo](#live-demo)
 - [💻 Getting Started](#getting-started)
   - [Setup](#setup)
   - [Prerequisites](#prerequisites)
@@ -22,7 +24,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 Blog app<a name="about-project"></a>.
+# 📖 My expended<a name="about-project"></a>.
 
 My expended app help people track their expends, by grouping every expends in group and show the total amount of every group
 
@@ -49,6 +51,13 @@ My expended app help people track their expends, by grouping every expends in gr
 - **Ruby on rails**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+<!-- LIVE DEMO -->
+## 🚀 Live Demo <a name="live-demo"></a>
+>
+- [Live Demo Link](https://expended.onrender.com)
+-[Live video Demo Link](https://drive.google.com/file/d/1k3igk6LxrNquSaqeafPr25oTBRttQcV7/view?usp=sharing)
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
