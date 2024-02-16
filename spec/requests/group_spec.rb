@@ -20,5 +20,4 @@ describe ' Controller /groups' do
     expect(response.body).not_to eq nil
     expect(response).to render_template 'groups/index'
   end
-
 end
