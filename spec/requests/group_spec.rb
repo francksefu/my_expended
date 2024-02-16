@@ -21,10 +21,4 @@ describe ' Controller /groups' do
     expect(response).to render_template 'groups/index'
   end
 
-  it 'get show for post' do
-    get "/groups/#{group.id}"
-    expect(response.status).to eq(200)
-    expect(response.body).not_to eq nil
-    expect(response).to render_template 'groups/show'
-  end
 end

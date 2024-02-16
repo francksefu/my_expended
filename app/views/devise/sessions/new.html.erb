@@ -1,5 +1,6 @@
-
-<div class= 'border border-1 mt-3 w-50 p-3 d-block mx-auto'>
+<div class="row p-3">
+<div class="col-md-3"> </div>
+<div class= 'border border-1 mt-3 col-md-6 p-3 d-block mx-auto'>
 <h2 class="text-secondary text-center"> Log in </h2>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field mb-3 row">
@@ -29,4 +30,4 @@
 <% end %>
 <%= render "devise/shared/links" %>
 </div>
-
+</div>

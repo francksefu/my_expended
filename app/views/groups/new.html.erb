@@ -1,6 +1,7 @@
 <h1 class="text-secondary text-center"> Create group of expends </h1>
-
-<div class= 'border border-1 mt-3 w-75 p-3 d-block mx-auto'>
+<div class="row p-3">
+<div class="col-md-3"> </div>
+<div class= 'border border-1 mt-3 col-md-6 p-3 d-block mx-auto'>
 <%= form_with model: @group, url: groups_path, method: :post, class: 'w-100', local: true do |form| %>
 <div class='input-group mb-3'>
   <%= form.label :name, class: 'input-group-text' %>
@@ -27,5 +28,7 @@
   <label for="taxi" class="form-check-label m-2"> <%= image_tag("taxi.png", :alt => "taxi") %> </label>
 </div>
 
-<%= form.submit class: 'btn btn-primary bleu' %>
+<%= form.submit class: 'w-100 btn btn-primary bleu' %>
 <% end %>
+
+</div>
