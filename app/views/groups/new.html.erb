@@ -1,0 +1,34 @@
+<h1 class="text-secondary text-center"> Create group of expends </h1>
+<div class="row p-3">
+<div class="col-md-3"> </div>
+<div class= 'border border-1 mt-3 col-md-6 p-3 d-block mx-auto'>
+<%= form_with model: @group, url: groups_path, method: :post, class: 'w-100', local: true do |form| %>
+<div class='input-group mb-3'>
+  <%= form.label :name, class: 'input-group-text' %>
+  <%= form.text_field :name, class: 'form-control'%>
+</div>
+ <h5 class='text-center text-secondary mt-3 mb-3'> choose icon </h5>
+<div class='input-group mb-3'>
+  <%= form.radio_button :icon, "mac", class:"form-check-input", id: "mac"%>
+  <label for="mac" class="form-check-label m-2"> <%= image_tag("mac.png", :alt => "mac") %> </label>
+</div>
+
+<div class='input-group mb-3'>
+  <%= form.radio_button :icon, "san", class:"form-check-input", id: "san"%>
+  <label for="san" class="form-check-label m-2"> <%= image_tag("san.png", :alt => "san") %> </label>
+</div>
+
+<div class='input-group mb-3'>
+  <%= form.radio_button :icon, "chick", class:"form-check-input", id: "chick"%>
+  <label for="chick" class="form-check-label m-2"> <%= image_tag("chick.png", :alt => "chick") %> </label>
+</div>
+
+<div class='input-group mb-3'>
+  <%= form.radio_button :icon, "taxi", class:"form-check-input", id: "taxi"%>
+  <label for="taxi" class="form-check-label m-2"> <%= image_tag("taxi.png", :alt => "taxi") %> </label>
+</div>
+
+<%= form.submit class: 'w-100 btn btn-primary bleu' %>
+<% end %>
+
+</div>

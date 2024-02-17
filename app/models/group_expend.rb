@@ -1,2 +1,0 @@
-class GroupExpend < ApplicationRecord
-end
